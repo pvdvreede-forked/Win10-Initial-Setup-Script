@@ -8,6 +8,7 @@
 ### Require administrator privileges ###
 RequireAdmin
 
+
 ### Privacy Tweaks ###
 DisableTelemetry                # EnableTelemetry
 DisableCortana                  # EnableCortana
@@ -76,9 +77,9 @@ SetDEPOptOut                    # SetDEPOptIn
 SetCurrentNetworkPrivate        # SetCurrentNetworkPublic
 # SetUnknownNetworksPrivate     # SetUnknownNetworksPublic
 # DisableNetDevicesAutoInst     # EnableNetDevicesAutoInst
-# DisableHomeGroups             # EnableHomeGroups
-# DisableSMB1                   # EnableSMB1
-# DisableSMBServer              # EnableSMBServer
+DisableHomeGroups             # EnableHomeGroups
+DisableSMB1                   # EnableSMB1
+DisableSMBServer              # EnableSMBServer
 # DisableNetBIOS                # EnableNetBIOS
 # DisableLLMNR                  # EnableLLMNR
 # DisableLLDP                   # EnableLLDP
@@ -90,11 +91,11 @@ SetCurrentNetworkPrivate        # SetCurrentNetworkPublic
 # DisableNCSIProbe              # EnableNCSIProbe
 # DisableConnectionSharing      # EnableConnectionSharing
 DisableRemoteAssistance         # EnableRemoteAssistance
-# EnableRemoteDesktop           # DisableRemoteDesktop
+DisableRemoteDesktop
 
 ### Service Tweaks ###
 # DisableUpdateMSRT             # EnableUpdateMSRT
-# DisableUpdateDriver           # EnableUpdateDriver
+EnableUpdateDriver
 EnableUpdateMSProducts          # DisableUpdateMSProducts
 # DisableUpdateAutoDownload     # EnableUpdateAutoDownload
 DisableUpdateRestart            # EnableUpdateRestart
@@ -120,11 +121,11 @@ EnableNTFSLongPaths             # DisableNTFSLongPaths
 # DisableAutoRebootOnCrash      # EnableAutoRebootOnCrash
 
 ### UI Tweaks ###
-DisableActionCenter             # EnableActionCenter
+EnableActionCenter
 DisableLockScreen               # EnableLockScreen
 # DisableLockScreenRS1          # EnableLockScreenRS1
 HideNetworkFromLockScreen       # ShowNetworkOnLockScreen
-HideShutdownFromLockScreen      # ShowShutdownOnLockScreen
+ShowShutdownOnLockScreen
 DisableLockScreenBlur           # EnableLockScreenBlur
 # DisableAeroShake              # EnableAeroShake
 DisableAccessibilityKeys        # EnableAccessibilityKeys
@@ -133,7 +134,7 @@ ShowFileOperationsDetails       # HideFileOperationsDetails
 # EnableFileDeleteConfirm       # DisableFileDeleteConfirm
 HideTaskbarSearch               # ShowTaskbarSearchIcon         # ShowTaskbarSearchBox
 HideTaskView                    # ShowTaskView
-ShowSmallTaskbarIcons           # ShowLargeTaskbarIcons
+ShowLargeTaskbarIcons
 SetTaskbarCombineWhenFull       # SetTaskbarCombineNever        # SetTaskbarCombineAlways
 HideTaskbarPeopleIcon           # ShowTaskbarPeopleIcon
 ShowTrayIcons                   # HideTrayIcons
@@ -146,7 +147,7 @@ DisableNewAppPrompt             # EnableNewAppPrompt
 # SetControlPanelSmallIcons     # SetControlPanelLargeIcons     # SetControlPanelCategories
 DisableShortcutInName           # EnableShortcutInName
 # HideShortcutArrow             # ShowShortcutArrow
-SetVisualFXPerformance          # SetVisualFXAppearance
+SetVisualFXAppearance
 # EnableTitleBarColor           # DisableTitleBarColor
 # SetAppsDarkMode               # SetAppsLightMode
 # SetSystemLightMode            # SetSystemDarkMode
@@ -212,7 +213,7 @@ DisableOneDrive                 # EnableOneDrive
 UninstallOneDrive               # InstallOneDrive
 UninstallMsftBloat              # InstallMsftBloat
 UninstallThirdPartyBloat        # InstallThirdPartyBloat
-# UninstallWindowsStore         # InstallWindowsStore
+UninstallWindowsStore         # InstallWindowsStore
 DisableXboxFeatures             # EnableXboxFeatures
 # DisableFullscreenOptims       # EnableFullscreenOptims
 DisableAdobeFlash               # EnableAdobeFlash
@@ -230,7 +231,7 @@ DisableMediaSharing             # EnableMediaSharing
 # UninstallMathRecognizer       # InstallMathRecognizer
 # UninstallPowerShellV2         # InstallPowerShellV2
 # UninstallPowerShellISE        # InstallPowerShellISE
-# InstallLinuxSubsystem         # UninstallLinuxSubsystem
+InstallLinuxSubsystem         # UninstallLinuxSubsystem
 # InstallHyperV                 # UninstallHyperV
 # UninstallSSHClient            # InstallSSHClient
 # InstallSSHServer              # UninstallSSHServer
@@ -241,7 +242,7 @@ AddPhotoViewerOpenWith          # RemovePhotoViewerOpenWith
 # UninstallPDFPrinter           # InstallPDFPrinter
 UninstallXPSPrinter             # InstallXPSPrinter
 RemoveFaxPrinter                # AddFaxPrinter
-# UninstallFaxAndScan           # InstallFaxAndScan
+UninstallFaxAndScan           # InstallFaxAndScan
 
 ### Server Specific Tweaks ###
 # HideServerManagerOnLogin      # ShowServerManagerOnLogin
@@ -255,6 +256,20 @@ RemoveFaxPrinter                # AddFaxPrinter
 # UnpinStartMenuTiles
 # UnpinTaskbarIcons
 
-### Auxiliary Functions ###
-WaitForKey
-Restart
+InstallChocolatey
+
+# General
+InstallChocolateyApp googlechrome
+
+# Development
+InstallChocolateyApp docker-desktop
+InstallChocolateyApp vscode
+
+# Work
+InstallChocolateyApp slack
+InstallChocolateyApp microsoft-teams
+
+# Games
+InstallChocolateyApp steam
+InstallChocolateyApp uplay
+InstallChocolateyApp epicgameslauncher

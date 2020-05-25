@@ -4076,6 +4076,26 @@ Function UnpinTaskbarIcons {
 ##########
 
 
+##########
+#region My functions
+##########
+
+Function InstallChocolatey {
+	Write-Output "Installing Chocolatey..."
+	if(Test-Path -Path "C:\ProgramData\chocolatey\choco.exe" -eq False) {
+		Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+	}
+}
+
+Function InstallChocolateyApp($Name) {
+	Write-Output "Install Chocolately app $Name..."
+	choco install --confirm $Name
+}
+
+##########
+#endregion My functions
+##########
+
 
 ##########
 #region Auxiliary Functions
