@@ -263,7 +263,14 @@ InstallChocolateyApp googlechrome
 
 # Development
 InstallChocolateyApp docker-desktop
+InstallChocolateyApp git
 InstallChocolateyApp vscode
+
+## Extensions
+InstallChocolateyApp vscode-yaml
+InstallChocolateyApp vscode-powershell
+InstallChocolateyApp vscode-prettier
+InstallChocolateyApp vscode-drawio
 
 # Work
 InstallChocolateyApp slack
