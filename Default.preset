@@ -168,7 +168,7 @@ ShowHiddenFiles                 # HideHiddenFiles
 # ShowEmptyDrives               # HideEmptyDrives
 # ShowFolderMergeConflicts      # HideFolderMergeConflicts
 EnableNavPaneExpand             # DisableNavPaneExpand
-# ShowNavPaneAllFolders         # HideNavPaneAllFolders
+ShowNavPaneAllFolders         # HideNavPaneAllFolders
 # ShowNavPaneLibraries          # HideNavPaneLibraries
 # EnableFldrSeparateProcess     # DisableFldrSeparateProcess
 # EnableRestoreFldrWindows      # DisableRestoreFldrWindows
@@ -259,11 +259,11 @@ UninstallFaxAndScan           # InstallFaxAndScan
 InstallChocolatey
 
 # General
+InstallChocolateyApp powertoys
 InstallChocolateyApp googlechrome
 
 # Development
 InstallChocolateyApp docker-desktop
-InstallChocolateyApp git
 InstallChocolateyApp vscode
 
 ## Extensions
